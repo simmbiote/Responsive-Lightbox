@@ -68,7 +68,7 @@
 
                 var img = $('<img src="' + $(plugin.current).attr('href') + '" draggable="false">');
 
-                $(img).load(function () {
+                $(img).on('load', function () {
                     $('.lightbox__loading').remove();
                     plugin.lightbox.append(img);
                     plugin.image = $("img", plugin.lightbox).hide();
